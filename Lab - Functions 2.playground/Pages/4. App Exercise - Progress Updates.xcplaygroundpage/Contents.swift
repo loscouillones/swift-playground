@@ -113,4 +113,16 @@ doConvert(30.6, from: "F", to: "F")
 
 // bad format
 doConvert(28.4, from: "DT", to: "C")
+
+// random numbers
+let randomInt = Int.random(in: 1..<5)
+
+var numbers = [1,2,3]
+var array = [1,2,3]
+array.insert(4, at: array.count)
+print(array)
+
+
+
+
 //: [Previous](@previous)  |  page 4 of 6  |  [Next: Exercise - Return Values](@next)
