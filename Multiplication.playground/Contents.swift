@@ -39,14 +39,15 @@ let data = [
     ]
 ]
 
+
 print("Name\t\tCode\t\tvalue\t\tvariation\n=============================================")
 for (code, stock) in data {
-    let value = pad(String(stock[code]?[0]))
-    let name = pad(stock[name]![0])
-    let variation = pad(String(stock[code]![1])+"%")
+    let value = stock["value"]!
+    let company = stock["name"]!
+    let variation = stock["variation"]!
     print(
     """
-    \(pad(name))\(pad(code))\(value)\(variation)
+    \(company)\t\t\(code)\t\t\(value)\t\t\(variation)%
     """
     )
 }
