@@ -10,6 +10,7 @@ import UIKit
 
 class ArtsViewController: UIViewController {
     @IBOutlet weak var collectionView:UICollectionView!
+    
     var arts = [Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99"),
         Art(image: #imageLiteral(resourceName: "joconde"), title: "La Joconde", trivia: "Blablahblah"),
     Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99")]
@@ -18,6 +19,7 @@ class ArtsViewController: UIViewController {
         super.viewDidLoad()
         print("viewDidLoad")
         collectionView.dataSource = self
+        
         collectionView.layer.borderColor = UIColor.red.cgColor
         collectionView.layer.borderWidth = 2.0
     }
