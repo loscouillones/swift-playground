@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var pickerView: UIPickerView!
     
     let villes = ["Paris", "Marseille", "Clermont", "Bagneux", "Neuilly", "Saint-Ouen"]
+    var city: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return villes[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        print(villes[row])
+//        city = villes[row]
+//    }
+    
+    @IBAction func onVilleSelect(_ sender: Any) {
+        let row = pickerView.selectedRow(inComponent: 0)
         print(villes[row])
+        // ou: print(city)
     }
 }
 
