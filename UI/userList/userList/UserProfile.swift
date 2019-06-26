@@ -8,20 +8,26 @@
 
 import Foundation
 
-struct UserProfile:CustomStringConvertible {
+struct UserProfile:CustomStringConvertible, Equatable {
     var description: String {
         return isTrainer ? "\(name) \(lastName) a \(age) ans et est formateur" : "\(name) \(lastName) a \(age) ans et est apprenant"
     }
     
     var name: String
     var lastName: String
+    var email: String
     var age: Int
     var isTrainer: Bool
     
-    init(name: String, lastName: String, age: Int, isTrainer: Bool) {
+    init(name: String, lastName: String, age: Int, isTrainer: Bool, email: String = "") {
         self.name = name
         self.lastName = lastName
         self.age = age
         self.isTrainer = isTrainer
+        self.email = email
+    }
+    
+    static func ==(lu: UserProfile, ru: UserProfile) -> Bool {
+        return lu.name == ru.name && lu.lastName == ru.lastName
     }
 }
