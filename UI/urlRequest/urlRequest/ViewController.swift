@@ -33,19 +33,13 @@ class ViewController: UIViewController {
         // 3. Création d'une task utilisant cette session pour appeler l'URL demandée
         let task = session.dataTask(with: url,
                                     completionHandler: { data, response, error in
-            // Cette fonction sera appelée lorsque la requête aura été effectuée
-            // NOTE: la fonction sera appelée quelque soit le résultat de la requête:
-            // Erreur server, timeout, 404, succès, etc...
-            // Les paramètres sont les suivants:
-            // data: contiendra les données renvoyées par la requête (s'il y en a)
-            // response: objet décrivant la réponse: code de retour, headers, encoding,..
-            // error: contient l'erreur rencontrée lors de la requête ou nil si pas d'erreur
+            
             if error != nil {
                 print("Error during request: \(error)")
                 return
             }
                             
-            // check the response status code: return if server returned an error
+            // On verifie que la réponse est dans les 2xx (pas d'erreur)
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
                     if let httpResponse = response as? HTTPURLResponse {
@@ -57,14 +51,15 @@ class ViewController: UIViewController {
                     return
             }
             
-            // check mime type
+            // Vérification du mimetype (optionnel)
             guard let mime = response?.mimeType, mime == "text/javascript" else {
                 print("Wrong MIME type!")
                 return
             }
             
-            // finally: do something with the data: decode it etc...
-            print(data!)
+            // Enfin: décodage de la réponse
+            let text = String(data: data!, encoding: String.Encoding.utf8)
+                                        print(text)
         })
         
         // Ici la requête a juste était préparée, mais pas envoyée
