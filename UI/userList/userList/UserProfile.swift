@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct UserProfile:CustomStringConvertible, Equatable {
     var description: String {
@@ -18,6 +19,7 @@ struct UserProfile:CustomStringConvertible, Equatable {
     var email: String
     var age: Int
     var isTrainer: Bool
+    var avatar: UIImage?
     
     init(name: String, lastName: String, age: Int, isTrainer: Bool, email: String = "") {
         self.name = name

@@ -13,8 +13,8 @@ class ArtsViewController: UIViewController {
     
     var arts = [Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99"),
         Art(image: #imageLiteral(resourceName: "joconde"), title: "La Joconde", trivia: "Blablahblah"),
-    Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99")]
-    
+        Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99")]
+    let image = #imageLiteral(resourceName: <#T##String#>)
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")

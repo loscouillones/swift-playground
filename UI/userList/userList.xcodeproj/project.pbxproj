@@ -16,7 +16,7 @@
 		372027CC22C26E7700F48EE2 /* userListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372027CB22C26E7700F48EE2 /* userListUITests.swift */; };
 		372027DA22C272FC00F48EE2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372027D922C272FC00F48EE2 /* UserProfile.swift */; };
 		372027DC22C379A500F48EE2 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372027DB22C379A500F48EE2 /* UsersTableViewController.swift */; };
-		37417F6622C3995C007C3B8C /* UsersTableCellViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37417F6522C3995C007C3B8C /* UsersTableCellViewControllerTableViewCell.swift */; };
+		37417F6622C3995C007C3B8C /* UsersTableCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37417F6522C3995C007C3B8C /* UsersTableCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		372027CD22C26E7700F48EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372027D922C272FC00F48EE2 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		372027DB22C379A500F48EE2 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
-		37417F6522C3995C007C3B8C /* UsersTableCellViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableCellViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		37417F6522C3995C007C3B8C /* UsersTableCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				372027DB22C379A500F48EE2 /* UsersTableViewController.swift */,
 				372027AB22C26E7600F48EE2 /* AppDelegate.swift */,
 				372027AD22C26E7600F48EE2 /* ViewController.swift */,
-				37417F6522C3995C007C3B8C /* UsersTableCellViewControllerTableViewCell.swift */,
+				37417F6522C3995C007C3B8C /* UsersTableCellViewController.swift */,
 				372027AF22C26E7600F48EE2 /* Main.storyboard */,
 				372027D922C272FC00F48EE2 /* UserProfile.swift */,
 				372027B222C26E7700F48EE2 /* Assets.xcassets */,
@@ -267,7 +267,7 @@
 			files = (
 				372027AE22C26E7600F48EE2 /* ViewController.swift in Sources */,
 				372027AC22C26E7600F48EE2 /* AppDelegate.swift in Sources */,
-				37417F6622C3995C007C3B8C /* UsersTableCellViewControllerTableViewCell.swift in Sources */,
+				37417F6622C3995C007C3B8C /* UsersTableCellViewController.swift in Sources */,
 				372027DC22C379A500F48EE2 /* UsersTableViewController.swift in Sources */,
 				372027DA22C272FC00F48EE2 /* UserProfile.swift in Sources */,
 			);

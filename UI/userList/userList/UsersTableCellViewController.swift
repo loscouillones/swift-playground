@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersTableCellViewControllerTableViewCell: UITableViewCell {
+class UsersTableCellViewController: UITableViewCell {
 
     var user: UserProfile! {
         didSet{
@@ -16,6 +16,7 @@ class UsersTableCellViewControllerTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -29,6 +30,11 @@ class UsersTableCellViewControllerTableViewCell: UITableViewCell {
             nameLabel.text = "\(user.name) \(user.lastName)"
             emailLabel?.text = user.email
             typeLabel.text = user.isTrainer ? "Formateur" : "Apprenant"
+            
+            let list = (0...8)
+            let choice = list.randomElement()!
+            let image = UIImage(named: String(choice))
+            profileImageView.image = image
         }
     }
     

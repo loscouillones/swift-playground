@@ -40,7 +40,7 @@ class UsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell", for: indexPath) as! UsersTableCellViewControllerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell", for: indexPath) as! UsersTableCellViewController
 
         let trainer = indexPath.section == 0
         let filteredUsers = users.filter { $0.isTrainer == trainer }
