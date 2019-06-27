@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Make Request"/>
                                 <connections>
-                                    <action selector="makeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Do6-Ou-3Lf"/>
+                                    <action selector="makeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSe-Mp-vxI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvE-Zm-ufY">
@@ -34,7 +34,6 @@
                                 </state>
                                 <connections>
                                     <action selector="make404Request:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NkS-Aj-Qvh"/>
-                                    <action selector="makeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8L-oD-2rj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhy-Bf-2hL">
@@ -45,7 +44,6 @@
                                 </state>
                                 <connections>
                                     <action selector="makeNotReachableRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDB-Ya-dFa"/>
-                                    <action selector="makeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zJQ-n5-eqy"/>
                                 </connections>
                             </button>
                         </subviews>

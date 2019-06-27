@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     let FLICKR_URL = "https://www.flickr.com/services/rest/?method=flickr.test.echo&format=json&api_key=e9de0663dda402e79dd975bcc9994463"
     
-    let ERROR_404_URL = "https://www.flickr.com/unknonw_dir/rest"
+    let ERROR_404_URL = "https://www.warpdesign.fr/experiments/toto"
     
     let NO_SERVER_URL = "https://crosarts.com"
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         // 1. Il nous faut créer une session
         // URLSession.shared est une session déjà créé qui ne nécessite pas de configuration
         let session = URLSession.shared
+        session.configuration.timeoutIntervalForRequest = 3
         
         // 2. Création d'une instance d'URL
         let url = URL(string: requestUrl)!
@@ -40,10 +41,10 @@ class ViewController: UIViewController {
             // response: objet décrivant la réponse: code de retour, headers, encoding,..
             // error: contient l'erreur rencontrée lors de la requête ou nil si pas d'erreur
             if error != nil {
-                print("Error during request: \n(error)")
+                print("Error during request: \(error)")
                 return
             }
-            
+                            
             // check the response status code: return if server returned an error
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
             }
             
             // check mime type
-            guard let mime = response?.mimeType, mime == "application/json" else {
+            guard let mime = response?.mimeType, mime == "text/javascript" else {
                 print("Wrong MIME type!")
                 return
             }
